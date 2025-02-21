@@ -1,9 +1,12 @@
 import * as React from "react";
-import { View, Text, Pressable, TouchableOpacity, StatusBar } from "react-native";
+import { View, Text, Pressable, TouchableOpacity, StatusBar, LogBox } from "react-native";
 import StackNavigator from "./src/Navigation/StackNavigator";
 import { Color } from "./src/GlobalStyles";
 
+
 const App = () => {
+
+  LogBox.ignoreAllLogs();
 
   return (
     <>
@@ -15,4 +18,6 @@ const App = () => {
     </>
   );
 };
+
+
 export default App;

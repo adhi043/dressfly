@@ -7,6 +7,7 @@ import Slider from '../Pages/Slider'
 import Replies from '../Pages/Replies'
 import ViewProduct from '../Pages/ViewProduct'
 import Sellers from '../Pages/Sellers'
+import Splash from '../Splash'
 
 const StackNavigator =()=>  {
 
@@ -17,7 +18,8 @@ const StackNavigator =()=>  {
             headerShown: false,
             statusBarStyle: 'light',
             animationTypeForReplace: 'push',
-          }} initialRouteName={'Main'}>
+          }} initialRouteName={'Splash'}>
+            <Stack.Screen name='Splash' component={Splash} options={{headerShown:false}} />
             <Stack.Screen name='Slider' component={Slider} options={{headerShown:false}} />
             <Stack.Screen name='Replies' component={Replies} options={{headerShown:false}} />
             <Stack.Screen name='ViewProduct' component={ViewProduct} options={{headerShown:false}} />

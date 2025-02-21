@@ -16,6 +16,7 @@ import { Text, View } from 'react-native';
 import { Color } from '../GlobalStyles';
 import Search from '../Pages/Search';
 import Cart from '../Pages/Cart';
+import Profile from '../Pages/Profile';
 const BottomNavigator = () => {
 
     const Tab = createBottomTabNavigator()
@@ -34,6 +35,7 @@ const BottomNavigator = () => {
                 height: 70
 
             },
+            tabBarHideOnKeyboard:true
         }}>
             <Tab.Screen name='Home' component={Home}
                 options={{
@@ -85,7 +87,7 @@ const BottomNavigator = () => {
                     )
                 }} />
 
-            <Tab.Screen name='User' component={Home}
+            <Tab.Screen name='User' component={Profile}
                 options={{
                     headerShown: false,
                     tabBarShowLabel: false,

@@ -1,3 +1,10 @@
+import { PixelRatio } from "react-native";
+
+const fontSize = (size) => {
+  const fontScale = PixelRatio.getFontScale();
+  return size / fontScale;
+}
+
 /* fonts */
 export const FontFamily = {
   pxRegular: "Roboto-BoldItalic",
@@ -5,15 +12,15 @@ export const FontFamily = {
 };
 /* font sizes */
 export const FontSize = {
-  pxRegular_size: 16,
-  font_size: 14,
-  headline3_size: 18,
-  font1_size: 11,
-  font2_size: 13,
-  size_3xs: 10,
-  size_mini: 15,
-  headline_size: 34,
-  headline2_size: 24,
+  pxRegular_size: fontSize(16),
+  font_size: fontSize(14),
+  headline3_size: fontSize(18),
+  font1_size: fontSize(11),
+  font2_size: fontSize(13),
+  size_3xs: fontSize(10),
+  size_mini: fontSize(15),
+  headline_size: fontSize(34),
+  headline2_size: fontSize(24),
 };
 /* Colors */
 export const Color = {
